@@ -1,6 +1,6 @@
 {
   "name": "jxa-common-used",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "d.ts for common used app",
   "main": "index.js",
   "types": "./types/index.d.ts",
