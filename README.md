@@ -12,10 +12,48 @@
 $ pnpm add jxa-common-used
 ```
 
-## API
+## Usage
 
-```js
-const jxaCommonUsed = require('jxa-common-used')
+```sh
+pnpm add -D @jxa/types @jxa/global-type jxa-common-used
+```
+
+tsconfig.json
+
+```json
+{
+  "compilerOptions": {
+    "types": ["@jxa/global-type", "@jxa/types"]
+  }
+}
+```
+
+or use triple slash directive
+
+```ts
+/// <reference types='@jxa/global-type' />
+/// <reference types='@jxa/types' />
+```
+
+in some-script.ts
+
+```ts
+#!txa
+
+/// <reference types='@jxa/global-type' />
+/// <reference types='@jxa/types' />
+
+import { PathFinder } from '..'
+
+{
+  const app = Application<PathFinder>('Path Finder')
+  console.log((app.selection() || []).map((x) => x.posixPath()))
+}
+
+{
+  const app = Application('Finder')
+  console.log((app.selection() || []).map((x) => x.url()))
+}
 ```
 
 ## Changelog
