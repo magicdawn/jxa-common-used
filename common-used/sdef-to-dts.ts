@@ -1,3 +1,5 @@
+#!/usr/bin/env ts-node
+
 /**
  * https://github.com/JXA-userland/JXA/blob/master/packages/%40jxa/types/tools/sdef-to-dts.js
  */
